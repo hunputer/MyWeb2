@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.header{
+		font-family: "Times New Roman", Times, serif;
+		text-align: center;
+	}
+
+	.text1{
+		color : blue;
+		text-align: left;
+		font-size: 10px;
+		font-family: "Times New Roman", Times, serif;
+	}
+	
+	.type1{
+		width: 250px;
+	}
+	
+	.type2{
+		width: 500px;
+		height : 300px;
+	}
+	
+	.write{
+		padding-left: 450px;
+	}
+	
+	.tbl{
+		margin : 0 auto;
+	}
+	
+</style>
+</head>
+<body>
+	<h1 class="header">게시물 작성</h1>
+	
+	<!-- form 태그 사용 -->
+	<!-- 제목, 작성자, 내용, write 버튼  -->
+	<form action="./boardList.html">
+		<table class="tbl">
+			<tr>
+				<td align="center" class ="text1">title</td>
+			</tr>
+			
+			<tr>
+     			<td><input type="text" class= "type1"></td>
+			</tr>
+			<tr>
+				<td align="center" class ="text1">writer</td>
+			</tr>
+			<tr>
+			    <td><input type="text" class= "type1"></td>
+			</tr>
+			<tr>
+				<td align="center" class ="text1">contents</td>
+		    </tr>
+		    
+		    <tr>
+		        <td><textarea rows="20" cols="20" class="type2"></textarea></td>
+		    </tr>
+		    
+		    <tr>
+		    	<td class= "write"><input type="submit" value="write"></td>
+		    </tr>	
+		</table>
+	</form>
+</body>
+</html>

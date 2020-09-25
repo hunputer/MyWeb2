@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#header{
+		margin-bottom: 50px;
+		text-align: center;
+	}
+	
+	.tbl{
+		width : 900px;
+		text-align : center;
+		border-spacing: 0px;
+		border-collapse: collapse;
+		margin : 0px auto;
+		color : gray;
+		font : 13px/1.5 "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	}
+	
+	.tbl td{
+	    border-bottom-color: gray;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+		text-align : center;
+		height : 40px;
+		text-decoration: none;
+	}
+	
+	#tr1{
+		color : #F8F8FF;
+		background-color: black;
+	}
+	
+	#td1{
+		width : 500px;
+	}
+	
+	.a1{
+		text-decoration: none;
+		color : black;
+		text-align: left;
+	}
+	
+</style>
+</head>
+<body>
+	<h1 id="header">Board List Page</h1>
+	<!-- 게시판 리스트 -->
+	<!-- 제목 클릭하면 boardSelect로 감 -->
+	<!-- 글쓰기 클릭하면 boardWrite로 이동 -->
+	<table class = "tbl">
+	<tr id ="tr1">
+	   <td>NO </td><td id ="td1">SUBJECT</td><td>NAME</td><td>DATE</td><td>HIT</td>
+	</tr>
+	<tr>
+	   <td>652</td> <td><a href="./boardSelect.html" class="a1">[콘서트]SF9 온라인 콘서트 공연 안내</a></td> <td>관리자</td> <td>20.09.21</td> <td>11826</td>
+	</tr>
+	<tr>
+	   <td>&emsp;</td><td>&emsp;</td><td>&emsp;</td><td>&emsp;</td><td><a href="./boardWrite.html"><button>글쓰기</button></a>    
+	</tr>
+	</table>
+</body>
+</html>
