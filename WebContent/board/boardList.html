@@ -3,63 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="http:/MyWeb2/css/common/reset.css" rel="stylesheet">
 <style type="text/css">
-	#header{
-		margin-bottom: 50px;
-		text-align: center;
+	/* Header */
+	header {
+		width: 100%;
+		height: 67px;
+		background-image: url("http:/MyWeb2/images/common/header_bg.png");
+		background-repeat: repeat-x;
+		position: fixed;
+		top: 0px;
+		
 	}
 	
-	.tbl{
-		width : 900px;
-		text-align : center;
-		border-spacing: 0px;
-		border-collapse: collapse;
-		margin : 0px auto;
-		color : gray;
-		font : 13px/1.5 "Nanum Gothic", "나눔고딕", "돋움", Dotum, "굴림", Gulim, sans-serif;
+	#header_top {
+		width: 60%;
+		height: 67px;
+		
+		margin: 0 auto;
 	}
 	
-	.tbl td{
-	    border-bottom-color: gray;
-		border-bottom-width: 2px;
-		border-bottom-style: solid;
-		text-align : center;
-		height : 40px;
+	#header_logo {
+		width: 25%;
+		height: 67px;
+		
+		padding: 13px 0px;
+		box-sizing: border-box;
+	}
+	
+	#header_nav {
+		width: 50%;
+		height: 67px;
+		
+		
+	}
+	
+	#header_nav li {
+		/* display: inline-block; */
+		float: left;
+		list-style: none;
+		
+		height: 67px;
+		width: 25%;
+		line-height: 67px;
+	}
+	
+	#header_nav a {
+		color: white;
 		text-decoration: none;
+		font-weight: bold;
 	}
 	
-	#tr1{
-		color : #F8F8FF;
-		background-color: black;
+	/* a 태그에 마우스가 올라왔을 때 */
+	#header_nav a:hover {
+		color: red;
 	}
 	
-	#td1{
-		width : 500px;
+	#header_sub {
+		width: 25%;
+		height: 67px;
 	}
 	
-	.a1{
+	#header_sub li {
+		float: right;
+		list-style: none;
+		
+		height: 67px;
+		width: 15%;
+		line-height: 67px;
+		text-align: right;
+		
+	}
+	
+	#header_sub a {
+		font-size: 0.8rem;
 		text-decoration: none;
-		color : black;
-		text-align: left;
+		color: #8c8c8c; 
 	}
 	
+	#header_sub a:hover {
+		color: white;
+	}
+	
+	.header_menu {
+		/* display: inline-block; */
+		float: left;
+		
+	}
+	
+	
+	/*************** Section  ********************************/
+	
+	#board_content {
+		width: 60%;
+		
+		min-height: 842px;/* min, max */
+		
+		
+		background-color: yellow;
+		margin: 167px auto 80px;
+		 
+	
+	}
+	
+	
+	
+	
+	
+	
+		/* Footer */
+	footer {
+		width: 100%;
+		height: 62px;
+		padding: 26px 0 44px 0;
+		background-image: url("http:/MyWeb2/images/common/header_bg.gif");
+	}
+	
+	#footer_wrap {
+		width: 60%;
+		height: 58px;
+		margin: 0 auto;
+	}
+	
+	#ft_logo {
+		float: left;
+		margin-right: 33px;
+	}
+	
+	#ft_menu {
+		width: 488px;
+		height: 58px;
+		float: left;
+		background-color: blue;
+	}
+	
+	#ft_site {
+		width: 223px;
+		height: 58px;
+		float: right;
+	}
+	
+	#ft_site > select {
+		background-color: #4a4a4a;
+		color: #a9a9a9;
+		border: none;
+		padding: 3px;
+		width: 223px;
+		box-sizing: border-box;
+		
+	}
+
 </style>
 </head>
 <body>
-	<h1 id="header">Board List Page</h1>
+	<!-- Header -->
+	<header>
+		<div id="header_top">
+			<div id="header_logo" class="header_menu" >
+				<a href="http:/MyWeb2/index.html"><img alt="" src="../images/common/logo.png"></a>
+			</div>
+			<nav id="header_nav" class="header_menu">
+				<ul>
+					<li><a href="http:/MyWeb2/board/boardList.html">BOARD</a></li>
+					<li><a href="#">ARTISTS</a></li>
+					<li><a href="#">PR CENTER</a></li>
+					<li><a href="#">AUDITION</a></li>
+				</ul>
+			
+			</nav>
+			<nav id="header_sub" class="header_menu">
+				<ul>
+					<li><a href="#">CN</a> </li>
+					<li><a href="#">JP</a> </li>
+					<li><a href="#">EN</a> </li>
+					<li><a href="#">KO</a> </li>
+					<li><a href="#">JOIN</a> </li>
+					<li><a href="#">LOGIN</a> </li>
+				</ul>
+			
+			</nav>
+		</div>
+	</header>
+	
+	<!-- Section -->
+	<section id="board_content">
+		<h1>Board List Page</h1>
 	<!-- 게시판 리스트 -->
-	<!-- 제목 클릭하면 boardSelect로 감 -->
+	<!-- 제목 클릭하면 boardSelect로 이동 -->
 	<!-- 글쓰기 클릭하면 boardWrite로 이동 -->
-	<table class = "tbl">
-	<tr id ="tr1">
-	   <td>NO </td><td id ="td1">SUBJECT</td><td>NAME</td><td>DATE</td><td>HIT</td>
-	</tr>
-	<tr>
-	   <td>652</td> <td><a href="./boardSelect.html" class="a1">[콘서트]SF9 온라인 콘서트 공연 안내</a></td> <td>관리자</td> <td>20.09.21</td> <td>11826</td>
-	</tr>
-	<tr>
-	   <td>&emsp;</td><td>&emsp;</td><td>&emsp;</td><td>&emsp;</td><td><a href="./boardWrite.html"><button>글쓰기</button></a>    
-	</tr>
-	</table>
+	</section>
+		<!-- Footer -->
+	<footer>
+		<div id="footer_wrap">
+			<div id="ft_logo">
+				<img alt="" src="http:/MyWeb2/images/common/ft_logo.png">
+			</div>
+			
+			<div id="ft_menu"></div>
+			
+			<div id="ft_site">
+				<select>
+					<option>FNC KINGDOM SITE</option>
+					<option>FNC STORE</option>
+					<option>FNC FACEBOOK</option>
+					<option>FNC INSTAGRAM</option>
+				</select>
+			</div>	
+		</div>
+	</footer>
 </body>
 </html>
